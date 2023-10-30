@@ -6,7 +6,7 @@
 // div({}, ...) . DOMPatcher(RDOM, VDOM)
 
 function DOMdispatch(dom, tree) {
-    dom.appendChild(tree());
+    dom.appendChild(tree())
 
     // dom => RDOM
     // tree() => VDOM
