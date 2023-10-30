@@ -9,13 +9,17 @@
     <div id="root"></div>
     <script src="/packages/index.js"></script>
     <script>
-        const count = 0;
+        let count = 0;
 
         function App() {
 
             return div({
                 id: "root"
-            }, "hello! " + Date.now())
+            }, "count: " + count, div({}, button({
+                $click: () => {
+                    count++;
+                }
+            }, "count up!")));
         }
 
         DOMdispatch(document.getElementById("root"), App)
